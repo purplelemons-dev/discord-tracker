@@ -11,6 +11,8 @@ RUN npm i
 COPY src .
 COPY tsconfig.json .
 
+RUN npm i -g typescript
+
 RUN npm run build
 
 CMD ["npm", "start"]

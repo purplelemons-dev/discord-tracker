@@ -1,6 +1,7 @@
 
 services:
   web:
+    image: purplelemons/discord-tracker
     build: .
     ports:
       - "10022"
