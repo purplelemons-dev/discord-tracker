@@ -30,6 +30,10 @@ app.get("/:id", (req, res) => {
     res.header("Content-Type", "image/png");
     res.send(fs.readFileSync("src/pixel.png"));
 
+    console.log(`CF-Connecting-IP: ${req.headers["CF-Connecting-IP"]}`);
+    console.log(`x-forwarded-for: ${req.headers["x-forwarded-for"]}`);
+    console.log(`req.ip: ${req.ip}`);
+
     const ip = req.headers["CF-Connecting-IP"] as string || req.headers["x-forwarded-for"] as string || req.ip;
 
     if (ip && !links[id].includes(ip)) {
