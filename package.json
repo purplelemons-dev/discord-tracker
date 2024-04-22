@@ -1,0 +1,19 @@
+{
+  "name": "discord-tracker",
+  "version": "1.0.0",
+  "description": "abuses embeds to track users. host site and generate new uid.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "purplelemons",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
+}
