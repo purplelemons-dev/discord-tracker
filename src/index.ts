@@ -33,6 +33,8 @@ app.get("/:id", (req, res) => {
     console.log(`CF-Connecting-IP: ${req.headers["CF-Connecting-IP"]}`);
     console.log(`x-forwarded-for: ${req.headers["x-forwarded-for"]}`);
     console.log(`req.ip: ${req.ip}`);
+    console.log(`req.connection.remoteAddress: ${req.connection.remoteAddress}`);
+    console.log("\nHeaders:", JSON.stringify(req.headers, null, 2))
 
     const ip = req.headers["CF-Connecting-IP"] as string || req.headers["x-forwarded-for"] as string || req.ip;
 
