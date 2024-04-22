@@ -8,7 +8,7 @@ COPY package.json .
 
 RUN npm i
 
-COPY src .
+COPY src src
 COPY tsconfig.json .
 
 RUN npm i -g typescript
