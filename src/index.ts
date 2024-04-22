@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     const uid = Math.random().toString(36).substring(2, 12);
     links[uid] = [];
 
-    res.send(`<textarea style="height: 12rem">${stuff}</textarea><p></p><script>document.querySelector("p").innerHTML = "You can access the link from <a href='/${uid}'>" + window.location + "${uid}</a>";</script>`);
+    res.send(`<textarea style="height: 12rem; length: 48rem">${stuff}</textarea><p></p><script>document.querySelector("p").innerHTML = "You can access the link from <a href='/${uid}'>" + window.location + "${uid}</a>";</script>`);
 });
 
 app.get("/:id", (req, res) => {
