@@ -19,15 +19,14 @@ app.get("/", (req, res) => {
     res.send(`<textarea style="height: 12rem; length: 48rem">${stuff}</textarea><p></p><script>document.querySelector("p").innerHTML = "You can access the link from <a href='/${uid}'>" + window.location + "${uid}</a>";</script>`);
 });
 
-
+/*
 app.get("/:id", (req, res) => {
-    // Send ./src/script.js as video/mp4
-    res.header("Content-Type", "video/mp4");
+    res.header("Content-Type", "image/png");
     res.send(fs.readFileSync("src/script.js"));
 
 });
+*/
 
-/*
 app.get("/:id", (req, res) => {
     const { id } = req.params;
     if (!links[id]) {
@@ -52,7 +51,6 @@ app.get("/:id", (req, res) => {
     }
 
 });
-*/
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}/`);
